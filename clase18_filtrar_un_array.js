@@ -28,7 +28,7 @@ var andres = {
   altura: 1.60
 }
 
-const esAlta = ({ altura }) => persona.altura > 1.8
+const esAlta = ({ altura }) => altura > 1.8
 
 var personas = [jorge, pedro, felipe, carolina, andres] 
 
@@ -37,4 +37,20 @@ var personasAltas = personas.filter(esAlta)
 //   return persona.altura > 1.8
 // })
 
-console.log(personasAltas)
+// const pasarAlturaACms = persona => {
+//   return {
+//     ...persona, 
+//     altura: persona.altura *= 100
+//   } 
+// }
+var personas = [jorge, pedro, felipe, carolina, andres] 
+
+const pasarAlturaACms = persona => ({
+  ...persona, 
+  altura: persona.altura *= 100
+}) 
+
+
+var personasCms = personas.map(pasarAlturaACms)
+
+console.log(personasCms)
