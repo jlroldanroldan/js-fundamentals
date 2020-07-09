@@ -43,5 +43,14 @@ var personasAltas = personas.filter(esAlta)
 //     altura: persona.altura *= 100
 //   } 
 // }
+var personas = [jorge, pedro, felipe, carolina, andres] 
 
-console.log(personasAltas)
+const pasarAlturaACms = persona => ({
+  ...persona, 
+  altura: persona.altura *= 100
+}) 
+
+
+var personasCms = personas.map(pasarAlturaACms)
+
+console.log(personasCms)
